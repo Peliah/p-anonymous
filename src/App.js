@@ -1,9 +1,12 @@
-
+import Home from "./pages/Home";
+import Diary from "./pages/Diary";
+import { Route, Routes } from "react-router-dom";
 function App() {
   return (
-    <div className="flex min-h-screen justify-center items-center bg-black text-blue-700 font-bold text-xl font-mono">
-      <p>Nothing Here Yet</p>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="diary" element={<Diary/>}/>
+    </Routes>
   );
 }
 
