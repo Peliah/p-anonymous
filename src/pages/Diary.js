@@ -1,8 +1,12 @@
-import React from 'react'
+import React from "react";
+import DiaryPage from "../components/DiaryPage";
 
 const Diary = () => {
   return (
-    <div>Diary</div>
+    <div className="flex justify-center items-center min-h-screen">
+      <DiaryPage />
+      
+    </div>
   )
 }
 
