@@ -30,19 +30,22 @@ const Diary = (props) => {
         </div>
         <div>
           <button className='border rounded-lg px-8 py-3 text-center font-bold text-white font-roboto-mono'>
-            Open Diary
+            GUIDELINES
           </button>
         </div>
       </nav>
       {/* <Navbar/> */}
-      <div className=" flex justify-center items-center min-h-screen font-roboto-mono bg-black pt-20">
-        <HTMLFlipBook width={window.innerWidth/3} height={window.innerHeight-200} useMouseEvents={true} ref={flipBookRef} usePortrait size="fixed" showCover={true} className="w-full bg-black rounded-lg">
-          <img src={require('../assets/images/deathnote_cover_for_download_by_deathnote_club_d1xmeas.jpg')}/>
-          <img src={require('../assets/images/deathnote_rules___page_1_by_deathnote_club_d1xmein.jpg')}/>
-          <img src={require('../assets/images/deathnote_rules___page_2_by_deathnote_club_d1xmply.jpg')}/>
-          <img src={require('../assets/images/deathnote_rules___page_3_by_deathnote_club_d1xmpp8.jpg')}/>
-          <img src={require('../assets/images/deathnote_rules___page_4_by_deathnote_club_d1xmps7.jpg')}/>
-          <img src={require('../assets/images/deathnote_rules___page_5_by_deathnote_club_d1xmpug.jpg')}/>
+      <div>
+
+      </div>
+      <div className=" flex justify-center items-center min-h-screen font-roboto-mono bg-white pt-20 rounded-lg">
+        <HTMLFlipBook width={window.innerWidth/3} height={window.innerHeight-200} useMouseEvents={true} ref={flipBookRef} size="fixed" showCover={true} mobileScrollSupport={true} className="w-full bg-black rounded-lg">
+          <img src={require('../assets/images/deathnote_cover_for_download_by_deathnote_club_d1xmeas.jpg')} className="rounded-lg"/>
+          <img src={require('../assets/images/deathnote_rules___page_1_by_deathnote_club_d1xmein.jpg')} className="rounded-lg"/>
+          <img src={require('../assets/images/deathnote_rules___page_2_by_deathnote_club_d1xmply.jpg')} className="rounded-lg"/>
+          <img src={require('../assets/images/deathnote_rules___page_3_by_deathnote_club_d1xmpp8.jpg')} className="rounded-lg"/>
+          <img src={require('../assets/images/deathnote_rules___page_4_by_deathnote_club_d1xmps7.jpg')} className="rounded-lg"/>
+          <img src={require('../assets/images/deathnote_rules___page_5_by_deathnote_club_d1xmpug.jpg')} className="rounded-lg"/>
           {generateDiaryPages(100)}
         </HTMLFlipBook> 
         {/* <button onClick={() => goToPage(10)}>Go to Page 10</button> */}

@@ -18,7 +18,7 @@ const DiaryPage = React.forwardRef((props, ref) => {
     }
 
   return (
-    <div className='flex justify-center items-center w-full h-full p-4 bg-white' ref={ref}>
+    <div className='flex justify-center items-center w-full h-full p-4 bg-black rounded-lg' ref={ref}>
         <form onSubmit={onSubmit} className='flex flex-col justify-center items-center h-full'>
             <div className="w-full">
                 <input value={title} onChange={(event) => setTitle(event.target.value)} placeholder="Add an Item" className="border rounded p-4 h-14 mr-5 w-7/12 shadow-sm"/>
