@@ -35,7 +35,7 @@ const Diary = (props) => {
         </div>
       </nav>
       {/* <Navbar/> */}
-      <div className=" flex justify-center items-center min-h-screen font-roboto-mono bg-black lg:bg-white pt-20 rounded-lg flex-col">
+      <div className=" flex justify-center items-center min-h-screen font-roboto-mono bg-black lg:bg-white pt-10 lg:pt-20 rounded-lg flex-col">
       <div className="flex items-center justify-evenly w-full">
         <img src={require('../assets/images/fontbolt (4).png')} alt="left" className="w-20" onClick={ () => flipBookRef.current.pageFlip().flipPrev('top')}/>
         <img src={require('../assets/images/fontbolt (3).png')} alt="right" className="w-20" onClick={() => flipBookRef.current.pageFlip().flipNext('top')}/>
