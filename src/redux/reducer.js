@@ -1,11 +1,19 @@
-// import { ADD_ITEM, DELETE_ITEM } from "./actions";
-
+// reducers/diaryReducer.js
 const initialState = {
-  diaryItems: [],
+  pageData: Array(100).fill(null).map(() => ({ title: "", date: "", text: "" })),
 };
 
 const diaryReducer = (state = initialState, action) => {
-
+  switch (action.type) {
+    case 'SAVE_DIARY_PAGE_DATA':
+      const { pageNumber, data } = action.payload;
+      return {
+        ...state,
+        pageData: state.pageData.map((page, index) => (index === pageNumber ? data : page)),
+      };
+    default:
+      return state;
+  }
 };
 
 export default diaryReducer;

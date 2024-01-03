@@ -12,9 +12,6 @@ const DiaryPage = React.forwardRef((props, ref) => {
             date: date,
             text: text
         }
-        setTitle("")
-        setText("")
-        setDate("")
     }
 
   return (

@@ -1,16 +1,7 @@
-// configureStore.js
+// store/index.js
+import { createStore } from 'redux';
+import diaryReducer from './reducer'
 
-import { createStore } from 'redux'
-import { persistStore, persistReducer } from 'redux-persist'
-import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
+const store = createStore(diaryReducer);
 
-import rootReducer from './reducer'
-
-const persistConfig = {
-  key: 'root',
-  storage,
-}
-
-const persistedReducer = persistReducer(persistConfig, rootReducer)
-export let store = createStore(persistedReducer)
-export let persistor = persistStore(store)
+export default store;
