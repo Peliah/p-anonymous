@@ -42,7 +42,7 @@ const Diary = (props) => {
         <img src={require('../assets/images/fontbolt (9).png')} alt="left" className="w-14 lg:w-20 block lg:hidden " onClick={ () => flipBookRef.current.pageFlip().flipPrev('top')}/>
         <img src={require('../assets/images/fontbolt (8).png')} alt="right" className="w-14 lg:w-20 block lg:hidden " onClick={() => flipBookRef.current.pageFlip().flipNext('top')}/>
       </div>
-        <HTMLFlipBook width={window.innerWidth > 600 ? window.innerWidth/3 : window.innerWidth} height={window.innerHeight-200} useMouseEvents={false} ref={flipBookRef} size="fixed" showCover={true} mobileScrollSupport={true} className="w-full bg-white rounded-lg">
+        <HTMLFlipBook width={window.innerWidth > 600 ? window.innerWidth/3 : window.innerWidth} height={window.innerHeight-200} useMouseEvents={false} ref={flipBookRef} size="fixed" showCover={true} mobileScrollSupport={true} className="w-full bg-white rounded-lg overflow-hidden">
           <img src={require('../assets/images/deathnote_cover_for_download_by_deathnote_club_d1xmeas.jpg')} className="rounded-lg h-fit" alt="deathnote guidelines"/>
           <img src={require('../assets/images/deathnote_rules___page_1_by_deathnote_club_d1xmein.jpg')} className="rounded-lg h-fit" alt="deathnote guidelines"/>
           <img src={require('../assets/images/deathnote_rules___page_2_by_deathnote_club_d1xmply.jpg')} className="rounded-lg h-fit" alt="deathnote guidelines"/>
